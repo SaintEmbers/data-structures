@@ -16,14 +16,12 @@ var Stack = function() {
 var stackMethods = {};
 
 stackMethods.push = function(value){
-  debugger
   // var index = 0
   this[this.items] = value
   this.items++
   // this.index++
 }
 stackMethods.pop = function(){
-  debugger
   if(this.items >= 1){
     this.items--
     var value = this[this.items]
