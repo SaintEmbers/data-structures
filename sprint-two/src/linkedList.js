@@ -27,7 +27,6 @@ var LinkedList = function(){
   list.contains = function(target){
     var isThere = false
     function find(node){
-      debugger
       if(node.value === target){
          isThere = true
       } else if(node.next){
