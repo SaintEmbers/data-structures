@@ -1,10 +1,17 @@
 var BinarySearchTree = function(value){
-  this.value = value;
 
+  var tree = Object.create(BinarySearchTree.prototype)
 
+  tree.value = value;
+  tree.left = null;
+  tree.right = null;
+
+  return tree
 };
 
-BinarySearchTree.prototype.insert = function(){
+BinarySearchTree.prototype.insert = function(value){
+  console.log(this)
+
 
 }
 
