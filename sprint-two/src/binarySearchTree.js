@@ -8,6 +8,7 @@ var BinarySearchTree = function(value){
 
   return tree
 };
+//var BinarySearchTree.prototype = {}
 
 BinarySearchTree.prototype.insert = function(value){
   console.log(this)
@@ -52,9 +53,19 @@ BinarySearchTree.prototype.contains = function(val){
 
 }
 
-BinarySearchTree.prototype.depthFirstLog = function(cb){
+BinarySearchTree.prototype.depthFirstLog = function(callBack){
+  callBack(this.value)
 
+  if(this.left){
+    this.left.depthFirstLog(callBack)
+  }
+  if(this.right){
+    this.right.depthFirstLog(callBack)
+
+  }
 }
+
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */
